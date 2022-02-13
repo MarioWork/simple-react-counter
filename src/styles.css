@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+*{
+    margin:0;
+    box-sizing: none;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ .counter--container{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter{
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    padding: 10px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+.counter--btn{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    border: none;
+    font-size: 5rem;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.counter--btn:hover{
+    background-color: rgb(104, 30, 30);
+}

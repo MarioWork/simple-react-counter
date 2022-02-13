@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./styles.css";
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export default function App(){
+
+    const [count,setCount] = React.useState(0);
+
+    function add(){
+        console.log("hello add");
+        setCount(prevCount =>prevCount+1);
+    }
+    
+    function sub(){
+        console.log("hello sub");
+        setCount(prevCount =>  prevCount-1);
+    }
+
+
+    return (
+        <div className="container">
+            <div className="counter--container">
+                    <button className="counter--btn" onClick={sub}>-</button>
+                    <h1 className="counter">{count}</h1>
+                    <button className="counter--btn" onClick={add}>+</button>
+            </div>
+        </div>
+    );
+}
+
+ReactDOM.render(<App />,document.getElementById("root"));
